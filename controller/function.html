@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+
+<div class="container mb-5">
+    <div class="text-center">
+    <h2><font color="{{color}}">This text color belongs to $rootScope</font></h2>
+    <!--    màu text theo value của $rootScope-->
+    </div>
+</div>
+
+<!--       ng-app ở thẻ body là thuộc tính của AngularJS. Nó đánh dấu vị trí mà code AngularJS bắt đầu có hiệu lực.-->
+
+<div ng-controller="FunctionController">
+    <!--Controller là một đối tượng Javascript bao gồm các thuộc tính và các phương thức.-->
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-4">
+                <div ng-init="quantity = 5; cost = 30; name = {firstname:'Johnny', lastname:'Lee'}; array = [10, 20, 30, 40, 50]">
+                    <!-- ng-init có nhiệm vụ khởi tạo giá trị cho các biến.-->
+
+                    <div><h2>Example expression</h2></div>
+
+                    <p>Total price: {{ cost * quantity }}</p>
+
+                    <p>{{ "Hello World! (This is a string binding)" }}</p>
+
+                    <p>Hello {{name.firstname + " " + name.lastname}}!</p>
+
+                    <p>Value of Array[3]: {{ array[3] }}</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-4">
+                <div><h2>Example binding data</h2></div>
+                <div>
+                    <p>{{sayHello()}}</p>
+                    <!--truyền 1 function-->
+                </div>
+
+                <div>
+                    <p>Person name: {{person.name}}</p>
+                    <p>Age {{person.age}}</p>
+                    <p>{{person.sayHi()}}</p>
+                    <!--truyền 1 đối tượng-->
+                </div>
+
+            </div>
+
+            <div class="col-4">
+                <div ng-controller="colorController">
+                    <h2>
+                        <font color="{{color}}">This text color belongs to $functionScope</font>
+                    </h2>
+                </div>
+                <div>
+                    <h5>
+                        <font color="{{ color }}">The rootScope's color not be overrided (still $rootScope's color)</font>
+                    </h5>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!--	Xử lí logic-->
+
+<script type="text/javascript">
+
+    var app = angular.module('myApp', []);
+
+    app.run(['$rootScope', function ($rootScope) {
+        $rootScope.color = "blue";
+    }]);
+
+    app.controller('FunctionController', ['$scope', function ($scope) {
+
+
+        $scope.sayHello = function () {
+            return "Hello world!";
+        };
+
+        $scope.person = {
+            name: 'Johnny',
+            age: 23,
+            sayHi: function () {
+                return `Hello there! I'm ` + this.name;
+            }
+        };
+
+    }]);
+
+    app.controller('colorController', ['$scope', function ($scope) {
+        $scope.color = 'red'
+    }]);
+
+</script>
+
+</body>
+</html>
