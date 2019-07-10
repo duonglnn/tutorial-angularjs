@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>AngularJS Expressions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+</head>
+<body ng-app="">
+<!--       ng-app ở thẻ body là thuộc tính của AngularJS. Nó đánh dấu vị trí mà code AngularJS bắt đầu có hiệu lực.-->
+<div class="text-center"
+
+     ng-init="quantity = 5; cost = 30; name = {firstname:'Johnny', lastname:'Lee'}; array = [10, 20, 30, 40, 50]">
+
+    <!--      ng-init có nhiệm vụ khởi tạo giá trị cho các biến.-->
+
+    <p>Example expression</p>
+
+    <p>Total price: {{ cost * quantity }}</p>
+
+    <p>{{ "Hello World!" }}</p>
+
+    <p>Hello {{name.firstname + " " + name.lastname}}!</p>
+
+    <p>Array[3]: {{ array[3] }}</p>
+
+</div>
+</body>
+</html>
