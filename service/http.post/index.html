@@ -11,14 +11,13 @@
 			Password: <input type="password" ng-model="password" /><br />
 			<button ng-click="login()">Login</button>
 		</form>
-		{{ message }}
 	</div>
 
 	<script type="text/javascript">
 		var app = angular.module('myApp', []);
-		app.controller('MyCtrl', function($scope, $http) {
+		app.controller('MyCtrl', function($scope, $http, $window) {
 			$scope.login = function() {
-				var url = 'login.php';
+				var url = 'http://www.mocky.io/v2/5d275084320000fe2a71baa0';
 	            var data = {
 	            	username: $scope.username,
 	            	password: $scope.password
@@ -28,6 +27,7 @@
 	            };
 	            $http.post(url, data, config).then(function(response) {
 	            	$scope.message = response.data;
+	            	$window.alert($scope.message);
 	            });
 			}
 		});
