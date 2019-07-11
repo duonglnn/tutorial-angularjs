@@ -1,4 +1,4 @@
-# angularjs-tutorial
+# Angularjs-tutorial
 Tutorial về framework AngularJS <br /><br />
 ## Tổng quan về AngularJS
 ### Giới thiệu
