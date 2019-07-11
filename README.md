@@ -1,6 +1,6 @@
-# angular1-tutorial
-Hướng dẫn về framework AngularJS <br /><br />
-## Tổng quan về AngularJS 1
+# angularjs-tutorial
+Tutorial về framework AngularJS <br /><br />
+## Tổng quan về AngularJS
 ### Giới thiệu
 AngularJS là một bộ Javascript Framework rất mạnh và thường được sử dụng để xây dựng project Single Page Application (SPA). Nó mở rộng HTML DOM với các thuộc tính bổ sung cho nên đáp ứng được nhiều yêu cầu từ phía người dùng. AngularJS là một Framework mã nguồn mở hoàn toàn miễn phí và được hàng ngàn các lập trình viên trên thế giới ưa chuộng và sử dụng. Angular JS hỗ trợ mô hình MVC.
 
@@ -13,7 +13,7 @@ Dưới đây là một số tính năng cốt lõi quan trọng của AngularJS
 - Directives: cho phép mở rộng HTML và bạn có thể custom lại các thuộc tính (attribute), phần tử (elements)
 - Templates: hiển thị thông tin từ controller, đây là một thành phần của views
 - Routing: chuyển đổi giữa các action trong controller
-- MVW: Model-View-Whatever, từ MVW chúng ta có thể phát triển thành MVC Model-View-Controller hoặc là MVVM Model-View-ViewModel
+- MVW: Model-View-Whatever, từ MVW có thể phát triển thành MVC Model-View-Controller hoặc là MVVM Model-View-ViewModel
 - Deep Linking (Liên kết sâu): cho phép bạn mã hóa trạng thái của ứng dụng trong các URL để nó có thể đánh dấu được với công cụ tìm kiếm.
 - Dependency Injection: liên kết, thống nhất các đối tượng và chức năng.
 
@@ -21,14 +21,14 @@ Mối liên hệ giữa các thành phần trong AngularJS <br />
 <img src="https://s3.amazonaws.com/classconnection/362/flashcards/6692362/png/screen_shot_2014-12-23_at_70514_pm-14A7A42335A47DBBC08.png" width="400">
 
 ### Cài đặt
-Để sử dụng AngularJS trong project, bạn cần phải khai báo 1 cặp thẻ `<script></script>` chứa đường link tới file <kbd>angular.min.js</kbd>. Trong tutorial này, tôi sẽ sử dụng AngularJS phiên bản 1.4.9 (phiên bản ổn định). Bạn có thể tải AngularJS trên [trang chủ](https://angularjs.org/) rồi giải nén, hoặc sử dụng CDN như sau `https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js`.
+Để sử dụng AngularJS trong project, cần phải khai báo 1 cặp thẻ `<script></script>` chứa đường link tới file <kbd>angular.min.js</kbd>. Trong tutorial này, sử dụng AngularJS phiên bản 1.7.8. [trang chủ](https://angularjs.org/) rồi giải nén, hoặc sử dụng CDN như sau `https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js`.
 
 
 
 
 ## Expression - Controller - Scope
 ### Expression
-AngularJS đồng bộ dữ liệu giữa ứng dụng với HTML bằng cách sử dụng _expression_. Hiểu 1 cách đơn giản, expression là dữ liệu chúng ta muốn hiển thị ra màn hình. Dữ liệu ở đây có thể là số, chuỗi, phần tử của mảng hoặc thuộc tính của đối tượng... 
+AngularJS đồng bộ dữ liệu giữa ứng dụng với HTML bằng cách sử dụng _expression_. Hiểu 1 cách đơn giản, expression là dữ liệu muốn hiển thị ra màn hình. Dữ liệu ở đây có thể là số, chuỗi, phần tử của mảng hoặc thuộc tính của đối tượng... 
 Expression được viết bên trong cặp dấu {{ }} 
 
 [Demo expression](https://github.com/duonglnn/tutorial-angularjs/blob/master/expression/expression.html)
@@ -52,14 +52,14 @@ Nếu như $scope chỉ ảnh hưởng trong phạm vi của controller (tính t
 
 [Demo rootScope](https://github.com/duonglnn/tutorial-angularjs/blob/master/controller/function.html)
 
-Trong ví dụ trên, ta có thể thấy nếu như $rootScope và $scope có một thuộc tính cùng tên, thì ở trong div khai báo ng-controller, thuộc tính của $scope sẽ ghi đè thuộc tính của $rootScope, nhưng ở bên ngoài div đó, thuộc tính của $rootScope sẽ không bị ghi đè.
+Trong ví dụ trên, có thể thấy nếu như $rootScope và $scope có một thuộc tính cùng tên, thì ở trong div khai báo ng-controller, thuộc tính của $scope sẽ ghi đè thuộc tính của $rootScope, nhưng ở bên ngoài div đó, thuộc tính của $rootScope sẽ không bị ghi đè.
 
 
 
 
 ## Directive
 ### Khái niệm
-AngularJS cho phép chúng ta mở rộng các phần tử HTML bằng cách thêm các thuộc tính mới gọi là _directive_. Bên cạnh những directive mà AngularJS đã cung cấp sẵn thì chúng ta cũng có thể tự định nghĩa các directive của riêng mình. 
+AngularJS cho phép  mở rộng các phần tử HTML bằng cách thêm các thuộc tính mới gọi là _directive_. Bên cạnh những directive mà AngularJS đã cung cấp sẵn thì cũng có thể tự định nghĩa các directive của riêng mình. 
 
 Các thuộc tính là directive thường có tiền tố **ng-** ở phía trước, ví dụ như: ng-app, ng-controller, ng-model, ... Danh sách các directive của AngularJS  có thể xem ở [đây](https://docs.angularjs.org/api/ng/directive)
 
@@ -94,7 +94,7 @@ _Ví dụ: Cho 1 thẻ input, kiểm tra xem giá trị nhập vào có phải l
 
 [Input validation](https://github.com/duonglnn/tutorial-angularjs/blob/master/form/validation.html)
 
-**Giải thích:** Ta thử nhập 1 chữ cái vào ô input, bật firebug lên ta sẽ thấy thẻ \<input> có thêm 1 class <kbd>ng-invalid</kbd> 
+**Giải thích:** Thử nhập 1 chữ cái vào ô input, bật firebug lên sẽ thấy thẻ \<input> có thêm 1 class <kbd>ng-invalid</kbd> 
 
 **2. ng-model-options**
 ng-model-options dùng để cấu hình một số thông số liên quan tới ng-model. Khi ứng dụng được chạy lên thì ng-model-options sẽ thực thi trước và sau đó ng-model mới được tạo. Các thông số bao gồm:
@@ -164,8 +164,6 @@ _Ví dụ 1:_ Mỗi lần click vào 1 button thì hiển thị ra số lần đ
 _Ví dụ 2:_ Hiển thị ra 1 menu dọc khi click vào 1 button, và ẩn menu đó đi khi click lần nữa.
 
 [toggle](https://github.com/duonglnn/tutorial-angularjs/blob/master/directive/toggle.html)
-
-
 
 
 ## Form
@@ -266,7 +264,7 @@ app.service('MyService', function () {
   };
 });
 ````
-Sau khi định nghĩa,a có thể sử dụng ở tất cả controller, directive và filter:
+Sau khi định nghĩa, có thể sử dụng ở tất cả controller, directive và filter:
 ````
 app.controller('MyController', function (MyService) {
   MyService.sayHello(); // logs 'hello'
@@ -374,7 +372,7 @@ app.config(function($routeProvider) {
   	.otherwise({redirectTo: '/view1'});
   });
 ````
-Giả sử khi gõ trên trình duyệt địa chỉ http://localhost/app/index.html#view1, AngularJS sẽ load view1.html đồng thời triệu gọi FirstController. Khối <kbd>otherwise</kbd> dùng để định nghĩa route mặc định.
+Giả sử khi gõ trên trình duyệt địa chỉ http://localhost:63342/tutorial-angularjs/route/overview/index.html?_ijt=9ufnsr8uqib9fm8888100nmpro#/about, AngularJS sẽ load about.html đồng thời triệu gọi $AboutCtrl. Khối <kbd>otherwise</kbd> dùng để định nghĩa route.
 
 Để hiển thị View, sử dụng directive <kbd>ng-view</kbd>: `<div ng-view></div>` hoặc `<ng-view></ng-view>`.
 
