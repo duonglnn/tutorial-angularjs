@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 </head>
 <body ng-app="">
-	<input type="text" ng-model="yourtext" /><br />
-	You entered: <span ng-bind="yourtext"></span>
+<div><input type="text" ng-model="yourtext"/><br/></div>
+<div>Binding your entered with ng-bind: <span ng-bind="yourtext"></span></div>
+<div>Binding your entered with {{}}: <span ng-bind="yourtext"></span></div>
 </body>
 </html>
