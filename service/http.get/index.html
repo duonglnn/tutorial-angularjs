@@ -34,15 +34,24 @@
                <td>{{ comic.chapter }}</td>
             </tr>
          </table>
+
+        <div style="margin-top: 50px">
+            <button ng-click="getComic()">Click to get Comics</button>
+        </div>
 	</div>
 
 	<script type="text/javascript">
 		var app = angular.module('myApp', []);
 		app.controller('MyCtrl', function($scope, $http) {
+
 			var url = 'http://www.mocky.io/v2/5d275002320000c52971ba9c';
-			return $http.get(url).then(function(response) {
-				$scope.comics = response.data;
-			});
+
+            $scope.getComic = function () {
+                return $http.get(url).then(function(response) {
+                    $scope.comics = response.data;
+                });
+            };
+
 		});
 	</script>
 </body>
