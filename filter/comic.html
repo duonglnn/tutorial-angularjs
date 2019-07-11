@@ -11,11 +11,13 @@
 		ID: <input type="text" ng-model="search.id" />
 		Name: <input type="text" ng-model="search.name" />
 		Chapter: <input type="text" ng-model="search.chapter" />
-		<div ng-repeat="comic in comics | filter:search | orderBy:'name' as results">
-			<p>ID: <span ng-bind="comic.id"></span></p> 
-			<p>Name: <span ng-bind="comic.name"></span></p> 
-			<p>Chapter: <span ng-bind="comic.chapter"></span></p> 
-		</div>
+		<ul>
+			<li ng-repeat="comic in comics | filter:search | orderBy:'name' as results" style="margin-bottom: 50px">
+				<p>ID: <span ng-bind="comic.id"></span></p>
+				<p>Name: <span ng-bind="comic.name"></span></p>
+				<p>Chapter: <span ng-bind="comic.chapter"></span></p>
+			</li>
+		</ul>
 		<div ng-if="!results.length">Không tìm thấy kết quả</div>
 	</div>
 
