@@ -27,7 +27,7 @@
                <th>Name</th>
                <th>Chapter</th>
             </tr>
-         
+
             <tr ng-repeat="comic in comics">
                <td>{{ comic.id }}</td>
                <td>{{ comic.name }}</td>
@@ -39,8 +39,8 @@
 	<script type="text/javascript">
 		var app = angular.module('myApp', []);
 		app.controller('MyCtrl', function($scope, $http) {
-			var url = 'data.php';
-			$http.get(url).then(function(response) {
+			var url = 'http://www.mocky.io/v2/5d275002320000c52971ba9c';
+			return $http.get(url).then(function(response) {
 				$scope.comics = response.data;
 			});
 		});
