@@ -6,7 +6,7 @@
 </head>
 <body ng-app="myApp">
 	<div ng-controller="MyCtrl">
-		<div ng-show="showMenu">
+		<div ng-show="!showMenu">
 			<h2>Menu</h2>
 			<ul>
 				<li>Menu 1</li>
@@ -14,9 +14,10 @@
 				<li>Menu 3</li>
 			</ul>			
 		</div>
+		<div ng-if="showMenu">Ahihi! d0^` ng0k'</div>
 		
-		<button ng-click="toggle()">Toggle</button>
-		<button ng-mouseover="toggle()">Toggle</button>
+			<button ng-click="toggle()">Toggle Click</button>
+			<button style="margin-left: 30px" ng-mouseover="toggle()">Toggle MouseOver</button>
 	</div>
 
 	<script type="text/javascript">
