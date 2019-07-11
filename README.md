@@ -378,7 +378,6 @@ Giả sử khi gõ trên trình duyệt địa chỉ http://localhost:63342/tuto
 
 _Ví dụ:_ Xây dựng 1 ứng dụng web gồm 3 page: home, about và contact
 
-[Overview demo](https://github.com/duonglnn/tutorial-angularjs/tree/master/route/overview)
 
 ### Truyền tham số 
 Để định nghĩa 1 route có truyền tham số trên URL, thì chỉ cần thêm `/:tên_tham_số` ở templateUrl:
@@ -397,3 +396,7 @@ _Ví dụ:_ Phát triển tiếp [$http.get demo](https://github.com/duonglnn/tu
 [Show comic detail](https://github.com/duonglnn/tutorial-angularjs/tree/master/route/paramss)
 
 **Giải thích:** Trong DetailCtrl, sau khi lấy được tham số id, sẽ lấy object trong mảng comics mà có id như thế bằng cách sử dụng hàm <kbd>filter</kbd> của Javascript.
+
+## Difference between Factory and Service
+
+[Link tham khảo](https://blog.thoughtram.io/angular/2015/07/07/service-vs-factory-once-and-for-all.html#the-difference-between-services-and-factories)
