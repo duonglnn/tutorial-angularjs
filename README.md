@@ -204,7 +204,7 @@ Dựa trên các state, AngularJS sẽ thêm vào form và input các class CSS 
 
 ### Ví dụ
 
-_Ví dụ 1:_ Xây dựng chương trình nhập danh sách sinh viên và lưu vào trong một mảng rồi in ra ngoài trình duyệt
+_Ví dụ 1:_ Xây dựng chương trình nhập danh sách heroes và lưu vào trong một mảng rồi in ra ngoài trình duyệt
 
 [Student List](https://github.com/duonglnn/tutorial-angularjs/blob/master/form/list.html)
 
