@@ -8,12 +8,12 @@
 <body ng-app="myApp">
 	<div ng-controller="MyCtrl">
 		<form ng-submit="submit()" >
-			Nhập danh sách sinh viên: 
-			<input type="text" ng-model="student" />
+			Nhập danh sách heroes:
+			<input type="text" ng-model="hero" />
 			<input type="submit" value="Thêm">
 		</form>
 
-		<p>Danh sách sinh viên:</p>
+		<p>Danh sách heroes:</p>
 		<pre>{{list}}</pre>
 		<ul>
 			<li ng-repeat="pupil in list">{{pupil}}</li>
@@ -26,9 +26,9 @@
 			$scope.list = [];
 
 			$scope.submit = function() {
-				if ($scope.student) {
-					$scope.list.push($scope.student);
-					$scope.student = '';
+				if ($scope.hero) {
+					$scope.list.push($scope.hero);
+					$scope.hero = '';
 				} 
 			}
 		}]);
