@@ -16,7 +16,7 @@
 			<p>Name: <span ng-bind="comic.name"></span></p> 
 			<p>Chapter: <span ng-bind="comic.chapter"></span></p> 
 		</div>
-		<div ng-if="results.length == 0">Không tìm thấy kết quả</div>
+		<div ng-if="!results.length">Không tìm thấy kết quả</div>
 	</div>
 
 	<script type="text/javascript">
