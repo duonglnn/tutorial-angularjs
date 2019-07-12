@@ -1,0 +1,23 @@
+<div class="jumbotron text-center">
+    <h1>The Product Page</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+
+<div class="row">
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="product in scotches">
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
