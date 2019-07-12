@@ -9,7 +9,7 @@ Dưới đây là một số tính năng cốt lõi quan trọng của AngularJS
 - Scope: những đối tượng kết nối Controller và View
 - Controller: lớp business logic phía sau views
 - Service: mục đích của xây dựng service là để tái sử dụng các phương thức chung ở nhiều view hoặc controller khác nhau
-- Filters (Bộ lọc): format lại dữ liệu hiển thị ra ngoài view người dùn
+- Filters (Bộ lọc): format lại dữ liệu hiển thị ra ngoài view người dùng
 - Directives: cho phép mở rộng HTML và bạn có thể custom lại các thuộc tính (attribute), phần tử (elements)
 - Templates: hiển thị thông tin từ controller, đây là một thành phần của views
 - Routing: chuyển đổi giữa các action trong controller
