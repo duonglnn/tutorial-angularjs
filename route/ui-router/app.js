@@ -8,18 +8,18 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
         .state('product', { // Định ngĩa 1 state product
             url: '/product', // khai báo Url hiển thị
-            templateUrl: 'templates/product.html', //đường dẫn view
+            templateUrl: 'templates/product/product.html', //đường dẫn view
             controller: 'PrtController' //// Khai báo 1 controller cho state product
         })
 
         .state('home', {
             url: '/home',
-            templateUrl: 'templates/home.html'
+            templateUrl: 'templates/home/home.html'
         })
 
         .state('about', {
             url: '/about',
-            templateUrl: 'templates/about.html'
+            templateUrl: 'templates/about/about.html'
         })
 
 });
